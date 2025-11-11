@@ -17,3 +17,11 @@ env.build('(deftemplate result (slot name))')
 # add facts to working memory
 env.assert_string(f'(result (name "{name}"))')
 #interface
+env.run()
+
+# output
+result = []
+for fact in env.facts():
+  if fact.template.name == 'result':
+    results.append(fact[;name;]) # why assert the fact?
+st.write(results[0],"better output")
